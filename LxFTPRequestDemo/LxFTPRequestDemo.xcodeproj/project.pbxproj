@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		388B47562069E98E0081A3B5 /* FTPListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B47552069E98E0081A3B5 /* FTPListViewController.m */; };
+		388B47592069EA910081A3B5 /* FTPList.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B47582069EA910081A3B5 /* FTPList.m */; };
+		388B475D2069F60F0081A3B5 /* FTPListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 388B475B2069F60F0081A3B5 /* FTPListCell.m */; };
+		388B475E2069F60F0081A3B5 /* FTPListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 388B475C2069F60F0081A3B5 /* FTPListCell.xib */; };
 		B63218951B679430003315D0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B63218941B679430003315D0 /* main.m */; };
 		B63218981B679430003315D0 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B63218971B679430003315D0 /* AppDelegate.m */; };
 		B632189B1B679430003315D0 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B632189A1B679430003315D0 /* ViewController.m */; };
@@ -29,6 +33,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		388B47542069E98E0081A3B5 /* FTPListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPListViewController.h; sourceTree = "<group>"; };
+		388B47552069E98E0081A3B5 /* FTPListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPListViewController.m; sourceTree = "<group>"; };
+		388B47572069EA910081A3B5 /* FTPList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPList.h; sourceTree = "<group>"; };
+		388B47582069EA910081A3B5 /* FTPList.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPList.m; sourceTree = "<group>"; };
+		388B475A2069F60F0081A3B5 /* FTPListCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FTPListCell.h; sourceTree = "<group>"; };
+		388B475B2069F60F0081A3B5 /* FTPListCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FTPListCell.m; sourceTree = "<group>"; };
+		388B475C2069F60F0081A3B5 /* FTPListCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FTPListCell.xib; sourceTree = "<group>"; };
 		B632188F1B679430003315D0 /* LxFTPRequestDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LxFTPRequestDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63218931B679430003315D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B63218941B679430003315D0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -102,6 +113,13 @@
 				B63218971B679430003315D0 /* AppDelegate.m */,
 				B63218991B679430003315D0 /* ViewController.h */,
 				B632189A1B679430003315D0 /* ViewController.m */,
+				388B47542069E98E0081A3B5 /* FTPListViewController.h */,
+				388B47552069E98E0081A3B5 /* FTPListViewController.m */,
+				388B47572069EA910081A3B5 /* FTPList.h */,
+				388B475A2069F60F0081A3B5 /* FTPListCell.h */,
+				388B475B2069F60F0081A3B5 /* FTPListCell.m */,
+				388B475C2069F60F0081A3B5 /* FTPListCell.xib */,
+				388B47582069EA910081A3B5 /* FTPList.m */,
 				B6441F5D1B67E2CC0018FA46 /* Little dragon female.jpg */,
 				B63218921B679430003315D0 /* Supporting Files */,
 			);
@@ -217,6 +235,7 @@
 			files = (
 				B6441F521B67E0FA0018FA46 /* JGProgressHUD Resources.bundle in Resources */,
 				B632189E1B679430003315D0 /* Main.storyboard in Resources */,
+				388B475E2069F60F0081A3B5 /* FTPListCell.xib in Resources */,
 				B6441F5E1B67E2CC0018FA46 /* Little dragon female.jpg in Resources */,
 				B63218A31B679430003315D0 /* LaunchScreen.xib in Resources */,
 				B63218A01B679430003315D0 /* Images.xcassets in Resources */,
@@ -236,9 +255,12 @@
 				B63218951B679430003315D0 /* main.m in Sources */,
 				B6441F591B67E0FA0018FA46 /* JGProgressHUDIndicatorView.m in Sources */,
 				B6441F541B67E0FA0018FA46 /* JGProgressHUDAnimation.m in Sources */,
+				388B475D2069F60F0081A3B5 /* FTPListCell.m in Sources */,
 				B6441F5C1B67E0FA0018FA46 /* JGProgressHUDSuccessIndicatorView.m in Sources */,
 				B6441F551B67E0FA0018FA46 /* JGProgressHUDErrorIndicatorView.m in Sources */,
+				388B47562069E98E0081A3B5 /* FTPListViewController.m in Sources */,
 				B6441F5A1B67E0FA0018FA46 /* JGProgressHUDPieIndicatorView.m in Sources */,
+				388B47592069EA910081A3B5 /* FTPList.m in Sources */,
 				B6441F561B67E0FA0018FA46 /* JGProgressHUDFadeAnimation.m in Sources */,
 				B6441F571B67E0FA0018FA46 /* JGProgressHUDFadeZoomAnimation.m in Sources */,
 				B6441F581B67E0FA0018FA46 /* JGProgressHUDIndeterminateIndicatorView.m in Sources */,

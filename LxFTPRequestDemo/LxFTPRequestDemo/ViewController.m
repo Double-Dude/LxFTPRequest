@@ -8,11 +8,11 @@
 #import "JGProgressHUD/JGProgressHUDPieIndicatorView.h"
 #import "LxFTPRequest.h"
 
-#error------   Configurate your Ftp address、uesrname、password  ------
+//#error------   Configurate your Ftp address、uesrname、password  ------
 
-static NSString *const FTP_ADDRESS = @"ftp://";
+static NSString *const FTP_ADDRESS = @"ftp://192.168.0.174/userdata/sonarlogs";
 static NSString *const USERNAME = @"anonymous";
-static NSString *const PASSWORD = @"";
+static NSString *const PASSWORD = @"guest";
 
 @interface ViewController () <UITableViewDataSource, UITableViewDelegate> {
     UITableView *_tableView;
