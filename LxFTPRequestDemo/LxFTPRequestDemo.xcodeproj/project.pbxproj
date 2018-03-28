@@ -207,6 +207,7 @@
 				TargetAttributes = {
 					B632188E1B679430003315D0 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 3525G5BTEK;
 					};
 				};
 			};
@@ -377,8 +378,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3525G5BTEK;
 				INFOPLIST_FILE = LxFTPRequestDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DoubleDude.LxFTPRequestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -387,8 +390,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 3525G5BTEK;
 				INFOPLIST_FILE = LxFTPRequestDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DoubleDude.LxFTPRequestDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

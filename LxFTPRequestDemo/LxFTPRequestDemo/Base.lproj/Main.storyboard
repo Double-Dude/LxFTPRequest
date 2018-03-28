@@ -34,26 +34,39 @@
                         <viewControllerLayoutGuide type="bottom" id="diH-uu-AAQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="701-ha-Es2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="A0X-WU-Dha">
-                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
+                                <rect key="frame" x="0.0" y="30" width="414" height="642"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Hhb-jl-L0f" id="64a-cw-s1T"/>
                                     <outlet property="delegate" destination="Hhb-jl-L0f" id="rNr-mS-dJe"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6h-xM-px6">
+                                <rect key="frame" x="180.66666666666666" y="0.0" width="53" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="bw1-cE-8Zq"/>
+                                </constraints>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refreshButtonDidClick:" destination="Hhb-jl-L0f" eventType="touchUpInside" id="YIs-RE-aBU"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="A0X-WU-Dha" secondAttribute="trailing" id="5L1-Cl-HhX"/>
-                            <constraint firstItem="A0X-WU-Dha" firstAttribute="top" secondItem="pTF-TZ-P5J" secondAttribute="bottom" id="O6I-Rw-1zM"/>
-                            <constraint firstItem="diH-uu-AAQ" firstAttribute="top" secondItem="A0X-WU-Dha" secondAttribute="bottom" id="fl8-TZ-kUz"/>
-                            <constraint firstItem="A0X-WU-Dha" firstAttribute="leading" secondItem="701-ha-Es2" secondAttribute="leading" id="huw-R2-pum"/>
+                            <constraint firstAttribute="bottom" secondItem="A0X-WU-Dha" secondAttribute="bottom" id="6TZ-Qb-hq3"/>
+                            <constraint firstItem="C6h-xM-px6" firstAttribute="centerX" secondItem="701-ha-Es2" secondAttribute="centerX" id="CdK-lc-lbb"/>
+                            <constraint firstItem="A0X-WU-Dha" firstAttribute="top" secondItem="C6h-xM-px6" secondAttribute="bottom" id="PmY-A1-ZGI"/>
+                            <constraint firstAttribute="trailing" secondItem="A0X-WU-Dha" secondAttribute="trailing" id="gnY-iJ-OM1"/>
+                            <constraint firstItem="A0X-WU-Dha" firstAttribute="leading" secondItem="701-ha-Es2" secondAttribute="leading" id="oFh-pI-bP4"/>
+                            <constraint firstItem="C6h-xM-px6" firstAttribute="top" secondItem="pTF-TZ-P5J" secondAttribute="bottom" id="ubq-z9-igM"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" id="HQs-HF-FkA"/>
                     <connections>
                         <outlet property="tableView" destination="A0X-WU-Dha" id="zEd-9k-EcU"/>
@@ -61,7 +74,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lNy-5q-mXa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-909" y="31"/>
+            <point key="canvasLocation" x="-910.14492753623199" y="30.978260869565219"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">

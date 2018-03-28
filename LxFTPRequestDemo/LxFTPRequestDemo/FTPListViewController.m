@@ -31,9 +31,16 @@ static NSString *const PASSWORD = @"guest";
     [super viewDidLoad];
 
     self.ftpLists = [[NSArray alloc] init];
-    [self getList];
 
     // Do any additional setup after loading the view.
+}
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self getList];
+}
+- (IBAction)refreshButtonDidClick:(id)sender {
+    [self getList];
 }
 
 - (void) getList {
@@ -96,7 +103,8 @@ static NSString *const PASSWORD = @"guest";
 
     LxFTPRequest *request = [LxFTPRequest downloadRequest];
     request.serverURL = [[NSURL URLWithString:FTP_ADDRESS] URLByAppendingPathComponent:ftpList.name];
-    request.localFileURL = [[NSURL fileURLWithPath:NSHomeDirectory()] URLByAppendingPathComponent:ftpList.name];
+    
+    request.localFileURL = [[NSURL URLWithString:@"file:///Users/RayQu/Desktop"] URLByAppendingPathComponent:ftpList.name];
     request.username = USERNAME;
     request.password = PASSWORD;
     
@@ -113,19 +121,19 @@ static NSString *const PASSWORD = @"guest";
             
             double differenceMB = (finishedSize - lastFinishedSize) / 1024.0 / 1024.0;
             double mbps = differenceMB / timeDifference;
-            NSLog(@"/n Download Speed: %.1f MB/s /n Downloaded percentage: %f", mbps, finishedPercent);
+            NSLog(@"\n Download Speed: %.1f MB/s \n Downloaded percentage: %f", mbps, finishedPercent);
             
             lastFinishedSize = finishedSize;
             lastDate = currentDate;
         }
     };
     request.successAction = ^(Class resultClass, id result) {
-        typeof(weakSelf) __strong strongSelf = weakSelf;
         [weakSelf.progressHUD dismissAnimated:YES];
-//        [weakSelf showMessage:result];
+        [weakSelf showMessage:@"Download finished!!!"];
     };
     request.failAction = ^(CFStreamErrorDomain domain, NSInteger error, NSString *errorMessage) {
         [weakSelf.progressHUD dismissAnimated:YES];
+        [weakSelf showMessage:@"Download ERROR!!!"];
         NSLog(@"domain = %ld, error = %ld, errorMessage = %@", domain, error, errorMessage); //
     };
     [request start];
@@ -134,5 +142,28 @@ static NSString *const PASSWORD = @"guest";
     _progressHUD.indicatorView = [[JGProgressHUDPieIndicatorView alloc] init];
     _progressHUD.progress = 0;
     [_progressHUD showInView:self.view animated:YES];
+}
+
+- (NSURL *)applicationDocumentsDirectory
+{
+    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+- (void)showMessage:(NSString *)message {
+    NSLog(@"message = %@", message); //
+    
+    JGProgressHUD *hud = [JGProgressHUD progressHUDWithStyle:JGProgressHUDStyleDark];
+    hud.indicatorView = nil;
+    hud.textLabel.text = message;
+    [hud showInView:self.view];
+    [hud dismissAfterDelay:3];
+    [self sendNotification:message];
+}
+
+- (void) sendNotification:(NSString *)text {
+    UILocalNotification *notification = [[UILocalNotification alloc] init];
+    notification.fireDate = [[NSDate date] dateByAddingTimeInterval:1];
+    notification.alertBody = text;
+    [[UIApplication sharedApplication] scheduleLocalNotification:notification];
 }
 @end
